@@ -1,5 +1,6 @@
 #include<stdio.h>
 #include<stdlib.h>
+#include<stdarg.h>
 #include<string.h>
 #include<math.h>
 #include<limits.h>
@@ -12,6 +13,7 @@
 typedef long long ll;
 typedef unsigned long long ull;
 typedef struct pair_{int x,y;}pair_t;
-void swap(int *x, int *y){int tmp=*x;*x=*y;*y=tmp;}
+void swap(int *x, int *y){int t=*x;*x=*y;*y=t;}
+void debug(char *f, ...){va_list a;va_start(a,f);vfprintf(stderr,f,a);va_end(a);}
 int asc_cmp(const void *x, const void *y){int X=*((int*)x),Y=*((int*)y);if(X<Y)return -1;else if(X>Y)return 1;else return 0;}
 int desc_cmp(const void *x, const void *y){int X=*((int*)x),Y=*((int*)y);if(X<Y)return 1;else if(X>Y)return -1;else return 0;}
